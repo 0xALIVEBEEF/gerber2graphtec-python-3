@@ -6,7 +6,7 @@ from tkinter import filedialog
 import sys
 import os
 import string
-
+from pathlib import Path
 from tkinter import *
 from os import path, access, R_OK, W_OK
 
@@ -24,7 +24,8 @@ speed_str  = StringVar()
 force_str  = StringVar()
 cut_mode_str  = StringVar()
 cutter_shared_name_str  = StringVar()
-CONFPATH='./g2g_gui.cnf'
+
+CONFPATH=os.path.join(os.path.dirname(__file__), 'g2g_gui.cnf')
 
 input_filename = ''
 output_filename = ''
